@@ -6,9 +6,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Image from 'next/image';
+import { useSmoothScroll } from '@/hooks/use-lenis';
 import Link from 'next/link';
 
 export default function AppAppBar() {
+  const { scrollToSection } = useSmoothScroll();
   return (
     <AppBar
       position="fixed"
@@ -44,10 +46,10 @@ export default function AppAppBar() {
               color="primary" 
               variant="text" 
               size="small" 
-              component="a" 
-              href="/#pricing"
+              onClick={() => scrollToSection('pricing')}
               sx={{
                 transition: 'all 0.2s ease',
+                cursor: 'pointer',
                 '&:hover': {
                   backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 },
@@ -59,10 +61,10 @@ export default function AppAppBar() {
               color="primary" 
               variant="text" 
               size="small" 
-              component="a" 
-              href="/#contact"
+              onClick={() => scrollToSection('contact')}
               sx={{
                 transition: 'all 0.2s ease',
+                cursor: 'pointer',
                 '&:hover': {
                   backgroundColor: 'rgba(255, 255, 255, 0.1)',
                 },

@@ -7,8 +7,10 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
+import { useSmoothScroll } from '@/hooks/use-lenis';
 
 export default function Hero() {
+  const { scrollToSection } = useSmoothScroll();
   return (
     <Box
       id="hero"

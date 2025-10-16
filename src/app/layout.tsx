@@ -8,6 +8,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GridBackground } from "@/components/background/grid-bg";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
+import { LenisProvider } from "@/providers/lenis-provider";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -36,16 +37,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="scroll-smooth">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.variable} font-sans antialiased`}>
         <NextTopLoader color="#000" showSpinner={false} height={2} crawlSpeed={120} />
         <AppRouterCacheProvider>
           <ThemeProvider defaultTheme="dark">
             <QueryProvider>
-              <GridBackground />
-              {children}
-              <Analytics />
-              <SpeedInsights />
+              <LenisProvider>
+                <GridBackground />
+                {children}
+                <Analytics />
+                <SpeedInsights />
+              </LenisProvider>
             </QueryProvider>
           </ThemeProvider>
         </AppRouterCacheProvider>
