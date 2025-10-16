@@ -6,21 +6,14 @@ import { motion } from "framer-motion";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 
 const FOOTER_LINKS = {
-  product: [
-    { label: "Documentation", href: "/docs" },
-  ],
-  company: [
-    { label: "Careers", href: "/careers" },
-  ],
   legal: [
     { label: "Privacy", href: "/privacy" },
     { label: "Terms", href: "/terms" },
-    { label: "Security", href: "/security" },
   ],
   social: [
-    { label: "Twitter", href: "https://twitter.com", icon: <Twitter className="h-5 w-5" /> },
-    { label: "LinkedIn", href: "https://linkedin.com", icon: <Linkedin className="h-5 w-5" /> },
-    { label: "Email", href: "mailto:supporto@qasly.com", icon: <Mail className="h-5 w-5" /> },
+    { label: "Twitter", href: "https://twitter.com/qaslylabs", icon: <Twitter className="h-5 w-5" /> },
+    { label: "LinkedIn", href: "https://linkedin.com/company/qaslylabs", icon: <Linkedin className="h-5 w-5" /> },
+    { label: "Email", href: "mailto:security@qaslylabs.xyz", icon: <Mail className="h-5 w-5" /> },
   ],
 };
 
@@ -28,45 +21,7 @@ export function Footer(): React.JSX.Element {
   return (
     <footer className="relative mt-32 overflow-hidden border-t border-white/10 backdrop-blur-xl">
       <div className="relative z-10 mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
-          {/* Product */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground/90">
-              Product
-            </h3>
-            <ul className="space-y-3">
-              {FOOTER_LINKS.product.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-foreground/70 transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground/90">
-              Company
-            </h3>
-            <ul className="space-y-3">
-              {FOOTER_LINKS.company.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-foreground/70 transition-colors hover:text-foreground"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {/* Legal */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground/90">

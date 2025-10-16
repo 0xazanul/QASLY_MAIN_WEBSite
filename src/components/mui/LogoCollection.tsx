@@ -21,7 +21,7 @@ export default function LogoCollection() {
           align="center"
           color="text.secondary"
         >
-          Trusted by leading startups
+          We have secured - 
         </Typography>
       </Container>
     </Box>

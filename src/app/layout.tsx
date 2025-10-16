@@ -18,8 +18,8 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: "Qasly",
-    template: "%s | Qasly",
+    default: "QaslyLabs",
+    template: "%s | QaslyLabs",
   },
   description: "Make security simple, fast, and affordable. Built for modern startups.",
   metadataBase: new URL("https://example.com"),

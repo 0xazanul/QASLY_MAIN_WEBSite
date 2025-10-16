@@ -24,7 +24,7 @@ export function Header(): React.JSX.Element {
           <div className="justify-self-start">
             <Link href="/" className="flex items-center gap-2">
               <Image src="/qasly.png" alt="Qasly" width={32} height={32} className="h-8 w-8" />
-              <span className="font-semibold tracking-tight">Qasly</span>
+              <span className="font-semibold tracking-tight">QaslyLabs</span>
             </Link>
           </div>
 

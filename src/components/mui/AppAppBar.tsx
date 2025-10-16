@@ -27,7 +27,6 @@ export default function AppAppBar() {
             alignItems: 'center',
             justifyContent: 'space-between',
             flexShrink: 0,
-            borderRadius: '999px',
             bgcolor: 'rgba(255, 255, 255, 0.05)',
             backdropFilter: 'blur(24px)',
             border: '1px solid',
@@ -44,8 +43,11 @@ export default function AppAppBar() {
             <Button color="primary" variant="text" size="small" component="a" href="/#pricing">
               Pricing
             </Button>
-            <Button color="primary" variant="contained" size="small" component="a" href="/#contact">
+            <Button color="primary" variant="text" size="small" component="a" href="/#contact">
               Contact
+            </Button>
+            <Button color="primary" variant="contained" size="small" component="a" href="/app">
+              Continue to app
             </Button>
           </div>
         </Toolbar>
