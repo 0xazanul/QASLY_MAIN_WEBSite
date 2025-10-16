@@ -82,6 +82,50 @@ export default function Hero() {
           </Stack>
         </Stack>
       </Container>
+      
+      {/* Container Scroll Animation */}
+      <Container sx={{ mt: 8, mb: 8 }}>
+        <Box
+          sx={{
+            position: 'relative',
+            maxWidth: '1200px',
+            mx: 'auto',
+            perspective: '1000px',
+          }}
+        >
+          <Box
+            sx={{
+              transform: 'rotateX(15deg)',
+              transformStyle: 'preserve-3d',
+              borderRadius: '20px',
+              border: '4px solid #6C6C6C',
+              backgroundColor: '#222222',
+              p: { xs: 1, md: 3 },
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+            }}
+          >
+            <Box
+              sx={{
+                borderRadius: '16px',
+                overflow: 'hidden',
+                backgroundColor: '#111',
+                aspectRatio: '16/10',
+              }}
+            >
+              <img
+                src="/qasly.png"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                }}
+                alt="Qasly Security Dashboard"
+              />
+            </Box>
+          </Box>
+        </Box>
+      </Container>
     </Box>
   );
 }
