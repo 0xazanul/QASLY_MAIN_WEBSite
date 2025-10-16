@@ -28,7 +28,7 @@ export default function TermsPage() {
           <section className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8">
             <h2 className="mb-4 text-2xl font-semibold">1. Acceptance of Terms</h2>
             <p className="text-foreground/80">
-              By accessing and using Qasly's security testing services, you accept and agree to be
+              By accessing and using QaslyLabs' security testing services, you accept and agree to be
               bound by the terms and provision of this agreement. If you do not agree to abide by
               the above, please do not use this service.
             </p>
@@ -37,7 +37,7 @@ export default function TermsPage() {
           <section className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8">
             <h2 className="mb-4 text-2xl font-semibold">2. Use License</h2>
             <p className="mb-4 text-foreground/80">
-              Permission is granted to temporarily use Qasly's security testing services for
+              Permission is granted to temporarily use QaslyLabs' security testing services for
               personal or commercial purposes. This is the grant of a license, not a transfer of
               title, and under this license you may not:
             </p>
@@ -52,7 +52,7 @@ export default function TermsPage() {
           <section className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8">
             <h2 className="mb-4 text-2xl font-semibold">3. Service Description</h2>
             <p className="text-foreground/80">
-              Qasly provides automated security testing and vulnerability scanning services. We
+              QaslyLabs provides automated security testing and vulnerability scanning services. We
               make reasonable efforts to provide accurate and timely security reports, but we do
               not guarantee that all vulnerabilities will be detected. Our service is intended to
               complement, not replace, comprehensive security practices.
@@ -62,8 +62,8 @@ export default function TermsPage() {
           <section className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8">
             <h2 className="mb-4 text-2xl font-semibold">4. Disclaimer</h2>
             <p className="text-foreground/80">
-              The materials on Qasly's website and services are provided on an 'as is' basis.
-              Qasly makes no warranties, expressed or implied, and hereby disclaims and negates all
+              The materials on QaslyLabs' website and services are provided on an 'as is' basis.
+              QaslyLabs makes no warranties, expressed or implied, and hereby disclaims and negates all
               other warranties including, without limitation, implied warranties or conditions of
               merchantability, fitness for a particular purpose, or non-infringement of
               intellectual property or other violation of rights.
@@ -73,9 +73,9 @@ export default function TermsPage() {
           <section className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl sm:p-8">
             <h2 className="mb-4 text-2xl font-semibold">5. Limitations</h2>
             <p className="text-foreground/80">
-              In no event shall Qasly or its suppliers be liable for any damages (including,
+              In no event shall QaslyLabs or its suppliers be liable for any damages (including,
               without limitation, damages for loss of data or profit, or due to business
-              interruption) arising out of the use or inability to use Qasly's services.
+              interruption) arising out of the use or inability to use QaslyLabs' services.
             </p>
           </section>
 

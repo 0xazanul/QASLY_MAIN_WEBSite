@@ -11,24 +11,24 @@ import {
 
 const FAQ_DATA = [
   {
-    question: "What is Qasly Labs?",
+    question: "What is QaslyLabs?",
     answer:
-      "Qasly Labs is your automated security co-pilot — it continuously scans your domains, APIs, and infra for vulnerabilities, no setup required. It's security that just works in the background while you ship.\n\nIf you can deploy in 2 minutes, you should secure in 2 minutes.",
+      "QaslyLabs is your automated security co-pilot — it continuously scans your domains, APIs, and infra for vulnerabilities, no setup required. It's security that just works in the background while you ship.\n\nIf you can deploy in 2 minutes, you should secure in 2 minutes.",
   },
   {
-    question: "Who is Qasly for?",
+    question: "Who is QaslyLabs for?",
     answer:
-      "Founders, devs, and small teams who move fast. You don't need a security engineer or a $20K tool — just plug in your app and let Qasly watch your back 24/7.\n\nBuilt for builders, not enterprises.",
+      "Founders, devs, and small teams who move fast. You don't need a security engineer or a $20K tool — just plug in your app and let QaslyLabs watch your back 24/7.\n\nBuilt for builders, not enterprises.",
   },
   {
     question: "How does it work?",
     answer:
-      "You connect your domain or API → Qasly starts scanning automatically → you get clear, actionable alerts. No config files, no false alarms, no fluff — just the stuff that actually matters.\n\nContinuous protection, zero setup.",
+      "You connect your domain or API → QaslyLabs starts scanning automatically → you get clear, actionable alerts. No config files, no false alarms, no fluff — just the stuff that actually matters.\n\nContinuous protection, zero setup.",
   },
   {
-    question: "Why should I trust Qasly?",
+    question: "Why should I trust QaslyLabs?",
     answer:
-      "Because we're builders too. We've reported real-world vulnerabilities, built our own scanners, and lived through the pain of securing early products. Qasly is everything we wish we had when we were starting out — simple, transparent, and made for real teams.\n\nSecurity made human.",
+      "Because we're builders too. We've reported real-world vulnerabilities, built our own scanners, and lived through the pain of securing early products. QaslyLabs is everything we wish we had when we were starting out — simple, transparent, and made for real teams.\n\nSecurity made human.",
   },
 ];
 
@@ -45,7 +45,7 @@ export function FAQSection(): React.JSX.Element {
         <h2 className="mb-3 text-3xl font-semibold tracking-tight sm:text-4xl">
           Frequently asked questions
         </h2>
-        <p className="text-foreground/60">Everything you need to know about Qasly.</p>
+        <p className="text-foreground/60">Everything you need to know about QaslyLabs.</p>
       </motion.div>
 
       <motion.div

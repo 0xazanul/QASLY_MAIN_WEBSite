@@ -36,17 +36,54 @@ export default function AppAppBar() {
           }}
         >
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 8, textDecoration: 'none' }}>
-            <Image src="/qasly.png" alt="Qasly" width={32} height={32} />
-            <span style={{ color: 'white', fontWeight: 600 }}>Qasly</span>
+            <Image src="/qasly.png" alt="QaslyLabs" width={32} height={32} />
+            <span style={{ color: 'white', fontWeight: 600 }}>QaslyLabs</span>
           </Link>
           <div style={{ display: 'flex', gap: 8 }}>
-            <Button color="primary" variant="text" size="small" component="a" href="/#pricing">
+            <Button 
+              color="primary" 
+              variant="text" 
+              size="small" 
+              component="a" 
+              href="/#pricing"
+              sx={{
+                transition: 'all 0.2s ease',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
               Pricing
             </Button>
-            <Button color="primary" variant="text" size="small" component="a" href="/#contact">
+            <Button 
+              color="primary" 
+              variant="text" 
+              size="small" 
+              component="a" 
+              href="/#contact"
+              sx={{
+                transition: 'all 0.2s ease',
+                '&:hover': {
+                  backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                },
+              }}
+            >
               Contact
             </Button>
-            <Button color="primary" variant="contained" size="small" component="a" href="/app">
+            <Button 
+              color="primary" 
+              variant="contained" 
+              size="small" 
+              component="a" 
+              href="/app"
+              sx={{
+                transition: 'all 0.2s ease',
+                '&:hover': {
+                  transform: 'translateY(-1px)',
+                  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+                },
+              }}
+            >
               Continue to app
             </Button>
           </div>

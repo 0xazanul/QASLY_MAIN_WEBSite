@@ -66,7 +66,7 @@ export function Footer(): React.JSX.Element {
 
         {/* Bottom Bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-foreground/60 sm:flex-row">
-          <p>© {new Date().getFullYear()} Qasly. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} QaslyLabs. All rights reserved.</p>
         </div>
       </div>
 

@@ -56,7 +56,7 @@ export default function Hero() {
             color="text.secondary"
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
           >
-            Built for modern startups. Qasly streamlines security testing so you can ship with confidence.
+            Built for modern startups. QaslyLabs streamlines security testing so you can ship with confidence.
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
@@ -83,47 +83,70 @@ export default function Hero() {
         </Stack>
       </Container>
       
-      {/* Container Scroll Animation */}
-      <Container sx={{ mt: 8, mb: 8 }}>
+      {/* Dashboard Preview */}
+      <Container sx={{ mt: 12, mb: 16 }}>
         <Box
           sx={{
             position: 'relative',
-            maxWidth: '1200px',
+            maxWidth: '1100px',
             mx: 'auto',
-            perspective: '1000px',
           }}
         >
           <Box
             sx={{
-              transform: 'rotateX(15deg)',
-              transformStyle: 'preserve-3d',
-              borderRadius: '20px',
-              border: '4px solid #6C6C6C',
-              backgroundColor: '#222222',
-              p: { xs: 1, md: 3 },
-              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+              borderRadius: '16px',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              backgroundColor: 'rgba(0, 0, 0, 0.2)',
+              p: { xs: 2, md: 3 },
+              boxShadow: '0 20px 40px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05)',
+              backdropFilter: 'blur(20px)',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                transform: 'translateY(-4px)',
+                boxShadow: '0 32px 64px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+              },
             }}
           >
             <Box
               sx={{
-                borderRadius: '16px',
+                borderRadius: '12px',
                 overflow: 'hidden',
-                backgroundColor: '#111',
+                backgroundColor: '#000',
                 aspectRatio: '16/10',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
               }}
             >
               <img
-                src="/qasly.png"
+                src="/screenshot.png"
+                loading="lazy"
+                decoding="async"
                 style={{
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                  objectPosition: 'center',
+                  objectPosition: 'center top',
+                  display: 'block',
                 }}
-                alt="Qasly Security Dashboard"
+                alt="QaslyLabs Security Dashboard"
               />
             </Box>
           </Box>
+          
+          {/* Subtle glow effect */}
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: '110%',
+              height: '110%',
+              background: 'radial-gradient(ellipse, rgba(255, 255, 255, 0.03) 0%, transparent 70%)',
+              borderRadius: '50%',
+              zIndex: -1,
+              pointerEvents: 'none',
+            }}
+          />
         </Box>
       </Container>
     </Box>

@@ -66,18 +66,25 @@ export function PricingSection(): React.JSX.Element {
         </p>
       </motion.div>
       <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2">
-        {PLANS.map((plan) => (
-          <PricingColumn
+        {PLANS.map((plan, index) => (
+          <motion.div
             key={plan.name}
-            name={plan.name}
-            icon={plan.icon}
-            description={plan.description}
-            price={plan.price}
-            priceNote={plan.priceNote}
-            cta={plan.cta}
-            features={plan.features}
-            variant={plan.variant}
-          />
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+          >
+            <PricingColumn
+              name={plan.name}
+              icon={plan.icon}
+              description={plan.description}
+              price={plan.price}
+              priceNote={plan.priceNote}
+              cta={plan.cta}
+              features={plan.features}
+              variant={plan.variant}
+            />
+          </motion.div>
         ))}
       </div>
     </section>

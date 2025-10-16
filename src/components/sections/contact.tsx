@@ -89,8 +89,9 @@ export function ContactSection(): React.JSX.Element {
           <div className="space-y-1.5">
             <input
               {...register("name")}
-              className="h-11 w-full rounded-lg border border-white/10 bg-transparent px-4 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all focus:border-white/30 focus:ring-1 focus:ring-white/20"
+              className="h-11 w-full rounded-lg border border-white/10 bg-transparent px-4 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all duration-200 focus:border-white/30 focus:ring-1 focus:ring-white/20 focus:bg-white/5"
               placeholder="Your name"
+              autoComplete="name"
             />
             {errors.name && (
               <p className="text-xs text-red-400/90">{errors.name.message}</p>
@@ -100,8 +101,9 @@ export function ContactSection(): React.JSX.Element {
             <input
               {...register("email")}
               type="email"
-              className="h-11 w-full rounded-lg border border-white/10 bg-transparent px-4 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all focus:border-white/30 focus:ring-1 focus:ring-white/20"
+              className="h-11 w-full rounded-lg border border-white/10 bg-transparent px-4 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all duration-200 focus:border-white/30 focus:ring-1 focus:ring-white/20 focus:bg-white/5"
               placeholder="you@company.com"
+              autoComplete="email"
             />
             {errors.email && (
               <p className="text-xs text-red-400/90">{errors.email.message}</p>
@@ -112,7 +114,7 @@ export function ContactSection(): React.JSX.Element {
           <textarea
             {...register("message")}
             rows={4}
-            className="w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all focus:border-white/30 focus:ring-1 focus:ring-white/20 resize-none"
+            className="w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all duration-200 focus:border-white/30 focus:ring-1 focus:ring-white/20 focus:bg-white/5 resize-none"
             placeholder="Tell us about your security needs..."
           />
           {errors.message && (
@@ -128,11 +130,14 @@ export function ContactSection(): React.JSX.Element {
             className="group inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-white px-8 text-sm font-medium text-black transition-all hover:bg-white/90 disabled:opacity-50"
           >
             {status === "loading" ? (
-              "Sending..."
+              <>
+                <div className="h-4 w-4 animate-spin rounded-full border-2 border-black/30 border-t-black"></div>
+                Sending...
+              </>
             ) : (
               <>
                 Send message
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
               </>
             )}
           </motion.button>

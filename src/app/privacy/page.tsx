@@ -62,7 +62,7 @@ export default function PrivacyPage() {
               <li>With your consent or at your direction</li>
               <li>With service providers who perform services on our behalf</li>
               <li>To comply with legal obligations or respond to legal requests</li>
-              <li>To protect the rights, property, or safety of Qasly and our users</li>
+              <li>To protect the rights, property, or safety of QaslyLabs and our users</li>
             </ul>
           </section>
 
