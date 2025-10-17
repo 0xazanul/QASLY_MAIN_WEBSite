@@ -19,20 +19,20 @@ const FOOTER_LINKS = {
 
 export function Footer(): React.JSX.Element {
   return (
-    <footer className="relative mt-32 overflow-hidden border-t border-white/10 backdrop-blur-xl">
-      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+    <footer className="relative mt-16 overflow-hidden border-t border-white/10 backdrop-blur-xl sm:mt-24 md:mt-32">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 pb-8 pt-12 sm:px-6 sm:pb-12 sm:pt-16">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
           {/* Legal */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground/90">
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-foreground/90 sm:mb-4 sm:text-sm">
               Legal
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               {FOOTER_LINKS.legal.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-foreground/70 transition-colors hover:text-foreground"
+                    className="text-xs text-foreground/70 transition-colors hover:text-foreground sm:text-sm"
                   >
                     {link.label}
                   </Link>
@@ -43,10 +43,10 @@ export function Footer(): React.JSX.Element {
 
           {/* Social */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-foreground/90">
+            <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-foreground/90 sm:mb-4 sm:text-sm">
               Connect
             </h3>
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3">
               {FOOTER_LINKS.social.map((link) => (
                 <motion.a
                   key={link.href}
@@ -54,10 +54,12 @@ export function Footer(): React.JSX.Element {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -2 }}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-foreground/70 backdrop-blur-md transition-colors hover:border-white/20 hover:bg-white/10 hover:text-foreground"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-foreground/70 backdrop-blur-md transition-colors hover:border-white/20 hover:bg-white/10 hover:text-foreground sm:h-10 sm:w-10"
                   aria-label={link.label}
                 >
-                  {link.icon}
+                  <div className="scale-75 sm:scale-100">
+                    {link.icon}
+                  </div>
                 </motion.a>
               ))}
             </div>
@@ -65,7 +67,7 @@ export function Footer(): React.JSX.Element {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-sm text-foreground/60 sm:flex-row">
+        <div className="mt-8 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-foreground/60 sm:mt-12 sm:flex-row sm:gap-4 sm:pt-8 sm:text-sm">
           <p>© {new Date().getFullYear()} QaslyLabs. All rights reserved.</p>
         </div>
       </div>

@@ -25,6 +25,11 @@ export const metadata: Metadata = {
   },
   description: "Make security simple, fast, and affordable. Built for modern startups.",
   metadataBase: new URL("https://example.com"),
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
   icons: {
     icon: "/qasly.png",
     apple: "/qasly.png",

@@ -34,18 +34,18 @@ const FAQ_DATA = [
 
 export function FAQSection(): React.JSX.Element {
   return (
-    <section id="faq" className="mx-auto w-full max-w-3xl px-4 py-24 sm:px-6">
+    <section id="faq" className="mx-auto w-full max-w-3xl px-4 py-16 sm:px-6 sm:py-20 md:py-24">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="mb-12 text-center"
+        className="mb-8 text-center sm:mb-12"
       >
-        <h2 className="mb-3 text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="mb-2 text-2xl font-semibold tracking-tight sm:mb-3 sm:text-3xl md:text-4xl">
           Frequently asked questions
         </h2>
-        <p className="text-foreground/60">Everything you need to know about QaslyLabs.</p>
+        <p className="text-sm text-foreground/60 sm:text-base">Everything you need to know about QaslyLabs.</p>
       </motion.div>
 
       <motion.div

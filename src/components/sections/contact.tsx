@@ -65,16 +65,16 @@ export function ContactSection(): React.JSX.Element {
   }
 
   return (
-    <section id="contact" className="mx-auto w-full max-w-2xl px-4 py-24 sm:px-6">
+    <section id="contact" className="mx-auto w-full max-w-2xl px-4 py-16 sm:px-6 sm:py-20 md:py-24">
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4 }}
-        className="mb-10 text-center"
+        className="mb-8 text-center sm:mb-10"
       >
-        <h2 className="mb-3 text-3xl font-semibold tracking-tight sm:text-4xl">Let's talk</h2>
-        <p className="text-foreground/60">Tell us about your project and we'll be in touch.</p>
+        <h2 className="mb-2 text-2xl font-semibold tracking-tight sm:mb-3 sm:text-3xl md:text-4xl">Let's talk</h2>
+        <p className="text-sm text-foreground/60 sm:text-base">Tell us about your project and we'll be in touch.</p>
       </motion.div>
 
       <motion.form
@@ -83,13 +83,13 @@ export function ContactSection(): React.JSX.Element {
         viewport={{ once: true }}
         transition={{ duration: 0.4, delay: 0.1 }}
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-5"
+        className="space-y-4 sm:space-y-5"
       >
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
           <div className="space-y-1.5">
             <input
               {...register("name")}
-              className="h-11 w-full rounded-lg border border-white/10 bg-transparent px-4 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all duration-200 focus:border-white/30 focus:ring-1 focus:ring-white/20 focus:bg-white/5"
+              className="h-12 w-full rounded-lg border border-white/10 bg-transparent px-4 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all duration-200 focus:border-white/30 focus:ring-1 focus:ring-white/20 focus:bg-white/5 sm:h-11 sm:text-base"
               placeholder="Your name"
               autoComplete="name"
             />
@@ -101,7 +101,7 @@ export function ContactSection(): React.JSX.Element {
             <input
               {...register("email")}
               type="email"
-              className="h-11 w-full rounded-lg border border-white/10 bg-transparent px-4 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all duration-200 focus:border-white/30 focus:ring-1 focus:ring-white/20 focus:bg-white/5"
+              className="h-12 w-full rounded-lg border border-white/10 bg-transparent px-4 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all duration-200 focus:border-white/30 focus:ring-1 focus:ring-white/20 focus:bg-white/5 sm:h-11 sm:text-base"
               placeholder="you@company.com"
               autoComplete="email"
             />
@@ -114,7 +114,7 @@ export function ContactSection(): React.JSX.Element {
           <textarea
             {...register("message")}
             rows={4}
-            className="w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all duration-200 focus:border-white/30 focus:ring-1 focus:ring-white/20 focus:bg-white/5 resize-none"
+            className="w-full rounded-lg border border-white/10 bg-transparent px-4 py-3 text-sm text-foreground placeholder:text-foreground/40 outline-none transition-all duration-200 focus:border-white/30 focus:ring-1 focus:ring-white/20 focus:bg-white/5 resize-none sm:text-base"
             placeholder="Tell us about your security needs..."
           />
           {errors.message && (
@@ -127,7 +127,7 @@ export function ContactSection(): React.JSX.Element {
             whileTap={{ scale: 0.99 }}
             type="submit"
             disabled={status === "loading"}
-            className="group inline-flex h-11 items-center justify-center gap-2 rounded-lg bg-white px-8 text-sm font-medium text-black transition-all hover:bg-white/90 disabled:opacity-50"
+            className="group inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-white px-6 text-sm font-medium text-black transition-all hover:bg-white/90 disabled:opacity-50 sm:h-11 sm:px-8 sm:text-base"
           >
             {status === "loading" ? (
               <>

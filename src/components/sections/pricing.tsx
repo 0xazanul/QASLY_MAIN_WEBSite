@@ -50,22 +50,22 @@ const PLANS: PricingColumnProps[] = [
 
 export function PricingSection(): React.JSX.Element {
   return (
-    <section id="pricing" className="mx-auto w-full max-w-6xl px-4 py-24 sm:px-6">
+    <section id="pricing" className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 sm:py-20 md:py-24 lg:py-28">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.5 }}
-        className="mb-12 flex flex-col items-center gap-4 text-center"
+        className="mb-8 flex flex-col items-center gap-3 text-center sm:mb-12 sm:gap-4"
       >
-        <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-5xl sm:leading-tight">
+        <h2 className="text-2xl font-semibold leading-tight tracking-tight sm:text-3xl md:text-4xl lg:text-5xl sm:leading-tight">
           Simple, transparent pricing
         </h2>
-        <p className="max-w-[600px] text-base font-medium text-foreground/70 sm:text-xl">
+        <p className="max-w-[90%] text-sm font-medium text-foreground/70 sm:max-w-[600px] sm:text-base md:text-lg lg:text-xl">
           Get security testing that scales with you. No surprises, no hidden fees.
         </p>
       </motion.div>
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 sm:grid-cols-2">
+      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8">
         {PLANS.map((plan, index) => (
           <motion.div
             key={plan.name}
@@ -73,6 +73,7 @@ export function PricingSection(): React.JSX.Element {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
+            className="w-full"
           >
             <PricingColumn
               name={plan.name}
